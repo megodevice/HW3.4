@@ -18,6 +18,7 @@ public class ContinentsFragment extends Fragment implements onItemClick {
 
     private FragmentContinentsBinding binding;
     private ArrayList<Continent> continents = new ArrayList<>();
+    private ContinentsAdapter continentsAdapter = null;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -29,12 +30,9 @@ public class ContinentsFragment extends Fragment implements onItemClick {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if (continents.size() == 0) {
-            binding.rvContinents.setAdapter(new ContinentsAdapter(loadData(continents), this));
-        }
-        else {
-            binding.rvContinents.setAdapter(new ContinentsAdapter(continents, this));
-        }
+        if (continents.size() == 0) loadData(continents);
+        if (continentsAdapter == null) continentsAdapter = new ContinentsAdapter(continents, this);
+        binding.rvContinents.setAdapter(continentsAdapter);
     }
 
     private ArrayList<Continent> loadData(ArrayList<Continent> continents) {
