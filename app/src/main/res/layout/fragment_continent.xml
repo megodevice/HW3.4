@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top|center_horizontal"
+    android:weightSum="1"
+    android:background="@color/bg_main"
+    tools:context=".ContinentFragment">
+
+    <ImageView
+        android:id="@+id/image_view_continent_image"
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        tools:background="@color/black"
+        android:layout_weight="0.4"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no" />
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/text_view_continent_name"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Название континента" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:text="@string/main_countries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textAlignment="center"
+        android:id="@+id/text_view_countries"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        tools:text="Страны"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
