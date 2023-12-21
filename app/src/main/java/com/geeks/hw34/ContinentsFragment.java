@@ -18,7 +18,7 @@ public class ContinentsFragment extends Fragment implements onItemClick {
 
     private FragmentContinentsBinding binding;
     private ArrayList<Continent> continents = new ArrayList<>();
-    private ContinentsAdapter continentsAdapter = null;
+    private ContinentsAdapter continentsAdapter;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
